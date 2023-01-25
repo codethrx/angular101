@@ -1,0 +1,30 @@
+<!-- <h1>Main file..</h1>
+<app-firstcomponent
+  [content]="['a', 'b']"
+  (log)="log($event)"
+></app-firstcomponent> -->
+<!-- <nav><a routerLink="/"></a> <a routerLink="/about"></a></nav>
+<router-outlet></router-outlet> -->
+<!-- <router-view></router-view> -->
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page"
+        >Start</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >About</a
+      >
+    </li>
+  </ul>
+  <button (click)="route('a')"></button>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

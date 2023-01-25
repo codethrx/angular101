@@ -1,0 +1,17 @@
+<div>
+  <h2>First Component..</h2>
+  <h1 [id]="id">Binding Id</h1>
+  <h1 [style]="{ backgroundColor: 'green' }">Binding Classes</h1>
+  <h1 [class]="{ red: red }">Ng class directive</h1>
+  <button (click)="onClick($event, 'Random Name')">Event Binding</button>
+  <input placeholder="Reference Variable demo " #input />
+  <button (click)="viewRefVar(input.value)">Reference variables.</button>
+  <h1>NgModel--{{ inputVal }}</h1>
+  <input type="text" [(ngModel)]="inputVal" />
+  <h2>ng if for swithc</h2>
+  <p *ngIf="show">Content</p>
+  <button (click)="onToggle()">{{ !show ? "show" : "hide" }}</button>
+  <p *ngFor="let i of list" (click)="deleteItem(i)">{{ i }}</p>
+  <h2>Emit</h2>
+  <button (click)="emitdata()">Emit The data</button>
+</div>
